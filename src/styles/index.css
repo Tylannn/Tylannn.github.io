@@ -1,5 +1,4 @@
 body {
-    font-family: Inter, "Noto Sans SC", sans-serif;
     overflow-y: scroll;
 }
 
@@ -13,9 +12,7 @@ div {
 }
 
 .panda-link-static {
-    @apply hover:cursor-pointer no-underline
-    hover:underline
-    hover:underline-offset-4;
+    @apply hover:cursor-pointer no-underline hover:underline hover:underline-offset-4;
     color: rgb(var(--color-text-link));
 }
 
@@ -24,7 +21,7 @@ div {
 }
 
 .panda-link {
-    @apply hover:cursor-pointer no-underline animated ;
+    @apply hover:cursor-pointer no-underline animated;
     color: rgb(var(--color-text-link));
 }
 
@@ -67,16 +64,11 @@ a.animated.active:after {
 }
 
 .panda-text {
-    @apply no-underline
-    cursor-pointer
-    text-blue-700
-    hover:text-blue-700;
+    @apply no-underline cursor-pointer text-blue-700 hover:text-blue-700;
 
-    @apply dark:text-stone-100
-    dark:hover:text-stone-100;
+    @apply dark:text-stone-100 dark:hover:text-stone-100;
 
-    @apply hover:underline
-    hover:underline-offset-4;
+    @apply hover:underline hover:underline-offset-4;
 }
 
 :root {
@@ -93,7 +85,7 @@ a.animated.active:after {
     --color-text-link: var(--color-primary-main);
     --color-text-link-hover: var(--color-secondary-main);
     --color-border: var(--color-primary-main);
-    --color-code-bg : #f3f4f6;
+    --color-code-bg: #f3f4f6;
 
 
     scroll-behavior: smooth;
@@ -101,14 +93,16 @@ a.animated.active:after {
 
 :root.dark {
     color-scheme: dark;
-    --color-primary-main: 10 132 255; /* #eb99a1 */
-    --color-secondary-main: 10 132 255; /* #e26f7a */
+    --color-primary-main: 10 132 255;
+    /* #eb99a1 */
+    --color-secondary-main: 10 132 255;
+    /* #e26f7a */
     --color-text-body: 214 211 209;
     --color-text-heading: 255 255 255;
     --color-text-link: var(--color-primary-main);
     --color-text-link-hover: var(--color-secondary-main);
     --color-border: var(--color-primary-main);
-    --color-code-bg : #1a202c;
+    --color-code-bg: #1a202c;
 
     scroll-behavior: smooth;
 }
@@ -117,8 +111,7 @@ a.animated.active:after {
  * prose link
  */
 .prose :where(a):not(:where([data-footnote-ref], [data-footnote-backref], .not-prose, .not-prose *)) {
-    @apply underline px-1
-    underline-offset-4;
+    @apply underline px-1 underline-offset-4;
     hover: underline;
 }
 
@@ -126,12 +119,7 @@ a.animated.active:after {
  * blockquote
  */
 .prose :where(blockquote):not(:where(.not-prose, .not-prose *)) {
-    @apply bg-gray-100 dark:bg-stone-600
-    text-base m-0
-    border-l-solid
-    font-normal rounded-lg
-    rounded-l-sm
-    pl-4 p-2;
+    @apply bg-gray-100 dark:bg-stone-600 text-base m-0 border-l-solid font-normal rounded-lg rounded-l-sm pl-4 p-2;
     border-left: 6px solid rgb(var(--color-primary-main)) !important;
 }
 
@@ -176,6 +164,18 @@ p {
     text-indent: 2em;
 }
 
-h1{
+h1 {
     text-align: center;
+}
+
+:root {
+    font-family: Inter, "Noto Sans SC", sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: Inter, "Noto Sans SC", sans-serif;
+    }
 }

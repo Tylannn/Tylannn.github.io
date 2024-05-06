@@ -11,8 +11,7 @@ const {path, t, locale} = useLocale(Astro.url)
 const title = locale === 'en' && FrontMatter['title-en'] ? FrontMatter['title-en'] : FrontMatter['title']
 ---
 
-<Layout title={title} navbar={false}>
-    <a rel="prefetch" class="panda-link mt-6" href={path('/')}>{t('post.back')}</a>
+<Layout title={title}>
     <style is:inline>
         /* notification */
         .notification p {

@@ -18,7 +18,6 @@ export interface Props {
 let { title, navbar,description } = Astro.props
 if (navbar === undefined) navbar = true
 if (!description) description = defaultDescription
-const fullTitle = `${title} - ${defaultTitle}`
 ---
 
 <!doctype html>
@@ -26,12 +25,12 @@ const fullTitle = `${title} - ${defaultTitle}`
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <title>{fullTitle}</title>
         <link rel="preconnect" href="https://rsms.me/"></link>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet"></link>
+        <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
     </head>
     <body class="max-width dark:bg-stone-700">
         <main >
