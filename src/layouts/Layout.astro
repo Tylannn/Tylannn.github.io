@@ -1,5 +1,6 @@
 ---
 import '../styles/index.css'
+import '../styles/heti.min.css'
 import Footer from './Footer.astro'
 import { useLocale } from '@utils/locale'
 import {PandaConfig} from "../config.js";
@@ -30,9 +31,8 @@ if (!description) description = defaultDescription
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap" rel="stylesheet"></link>
-        <link rel="stylesheet" href="//unpkg.com/heti/umd/heti.min.css">
     </head>
-    <body class="max-width dark:bg-stone-700">
+    <body class="heti max-width dark:bg-stone-700">
         <main >
             <slot />
         </main>
